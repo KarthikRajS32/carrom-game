@@ -1,35 +1,33 @@
-import { Vector2, Entity, CoinState } from '../types';
-
-export const distance = (p1: Vector2, p2: Vector2): number => {
+export const distance = (p1, p2) => {
   const dx = p1.x - p2.x;
   const dy = p1.y - p2.y;
   return Math.sqrt(dx * dx + dy * dy);
 };
 
-export const normalize = (v: Vector2): Vector2 => {
+export const normalize = (v) => {
   const mag = Math.sqrt(v.x * v.x + v.y * v.y);
   if (mag === 0) return { x: 0, y: 0 };
   return { x: v.x / mag, y: v.y / mag };
 };
 
-export const dot = (v1: Vector2, v2: Vector2): number => {
+export const dot = (v1, v2) => {
   return v1.x * v2.x + v1.y * v2.y;
 };
 
-export const subtract = (v1: Vector2, v2: Vector2): Vector2 => {
+export const subtract = (v1, v2) => {
   return { x: v1.x - v2.x, y: v1.y - v2.y };
 };
 
-export const add = (v1: Vector2, v2: Vector2): Vector2 => {
+export const add = (v1, v2) => {
   return { x: v1.x + v2.x, y: v1.y + v2.y };
 };
 
-export const scale = (v: Vector2, s: number): Vector2 => {
+export const scale = (v, s) => {
   return { x: v.x * s, y: v.y * s };
 };
 
 // Elastic collision resolution between two circles
-export const resolveCollision = (e1: Entity, e2: Entity) => {
+export const resolveCollision = (e1, e2) => {
   const dx = e2.pos.x - e1.pos.x;
   const dy = e2.pos.y - e1.pos.y;
   const dist = Math.sqrt(dx * dx + dy * dy);

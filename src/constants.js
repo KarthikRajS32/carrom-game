@@ -1,6 +1,5 @@
-
 export const BOARD_SIZE = 800;
-export const POCKET_RADIUS = 35;
+export const POCKET_RADIUS = 20;
 export const CUSHION_WIDTH = 45; // Slightly thicker for a premium feel
 export const PLAY_AREA_PADDING = 65; 
 

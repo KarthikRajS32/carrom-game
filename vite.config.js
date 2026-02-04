@@ -16,8 +16,22 @@ export default defineConfig(({ mode }) => {
       },
       resolve: {
         alias: {
-          '@': path.resolve(__dirname, '.'),
+          '@': path.resolve(process.cwd(), './src'),
         }
+      },
+      build: {
+        target: 'esnext',
+        minify: 'terser',
+        rollupOptions: {
+          output: {
+            manualChunks: {
+              vendor: ['react', 'react-dom']
+            }
+          }
+        }
+      },
+      optimizeDeps: {
+        include: ['react', 'react-dom']
       }
     };
 });

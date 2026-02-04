@@ -18,3 +18,16 @@ View your app in AI Studio: https://ai.studio/apps/drive/1E65Xag0HY6PRhe2S6OriaR
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+## Project Structure
+
+This is a **JavaScript** Vite + React project with the following structure:
+
+- `App.jsx` - Main application component
+- `components/` - React components (MainMenu, GameCanvas, UIOverlay)
+- `classes/` - Game engine classes (CarromEngine)
+- `utils/` - Utility functions (physics calculations)
+- `types.js` - Type definitions and enums
+- `constants.js` - Game constants and configuration
+- `index.jsx` - Application entry point
+- `vite.config.js` - Vite configuration
